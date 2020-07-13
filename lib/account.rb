@@ -1,6 +1,10 @@
 class Account
+
+BASE_BALANCE = 0
+
   def initialize
-    @balance = [0]
+    @balance = BASE_BALANCE
+    @transactions = []
   end
 
   def deposit(int)
