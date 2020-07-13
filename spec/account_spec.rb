@@ -22,4 +22,10 @@ describe Account do
     expect(subject).to respond_to(:withdraw).with(1).arguments
   end
 
+  it "deducts withdrawal from balance" do
+    subject.deposit(1000)
+    subject.withdraw(500)
+    expect(subject.instance_variable_get(:@balance)).to eql(500)
+  end
+
 end

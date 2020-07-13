@@ -8,6 +8,7 @@ class Account
   end
 
   def withdraw(int)
+    @balance -= int
   end
 
 end
