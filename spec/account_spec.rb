@@ -30,12 +30,14 @@ describe Account do
 
   it "adds the deposit to the transaction history" do
     subject.deposit(1000)
-    expect(subject.instance_variable_get(:@transactions)).to include({"13/07/2020" => 1000})
+    @time = Time.now
+    expect(subject.instance_variable_get(:@transactions)).to include({@time.strftime("%d/%m/%Y") => 1000})
   end
 
   it "adds the withdrawal to the transaction history" do
     subject.withdraw(500)
-    expect(subject.instance_variable_get(:@transactions)).to include({"13/07/2020" => 500})
+    @time = Time.now
+    expect(subject.instance_variable_get(:@transactions)).to include({@time.strftime("%d/%m/%Y") => 500})
   end
 
 end
