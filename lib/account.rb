@@ -13,18 +13,31 @@ class Account
 
   def deposit(value)
     @balance += value
-    @transactions.push({ TIME.strftime("%d/%m/%Y") => value })
+    deposit_update(credit: value, balance: @balance)
+
   end
 
   def withdraw(value)
     return 'Your funds are insufficient' if @balance < value
-    
+
     @balance -= value
-    @transactions.push({ TIME.strftime("%d/%m/%Y") => value })
+    withdrawal_update(debit: value, balance: balance)
   end
 
-  def update_statement
-    return 1000
+  def statement
+
+  end
+
+  private
+
+  def deposit_update(credit: nil, balance: nil)
+    update = @statement.new(credit: credit, balance: balance)
+    @transactions.push(update)
+  end
+
+  def withdrawal_update(debit: nil, balance: nil)
+    update = @statement.new(debit: debit, balance: balance)
+    @transactions.push(update)
   end
 
   attr_accessor :balance

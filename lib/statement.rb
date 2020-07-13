@@ -1,15 +1,11 @@
 class Statement
 
-  def initialize(credit: nil, debit: nil, balance: nil)
+  DATE = Time.now.strftime("%d/%m/%Y")
+
+  def initialize(credit: nil, debit: nil, balance: nil, date: DATE)
     @credit = credit
     @debit = debit
     @balance = balance
+    @date = DATE
   end
-  #
-  # puts "date || credit || debit || balance"
-  # @transactions.each do |transaction|
-  #   transaction.each do |key, value|
-  #     puts "#{key}" " || " "#{value}" " || " "#{@balance}"
-  #   end
-  # end
 end
