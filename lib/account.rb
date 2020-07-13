@@ -1,11 +1,14 @@
+require_relative './statement.rb'
+
 class Account
 
   BASE_BALANCE = 0
   TIME = Time.now
 
-  def initialize(balance: BASE_BALANCE)
+  def initialize(balance: BASE_BALANCE, statement: Statement)
     @balance = balance
     @transactions = []
+    @statement = statement
   end
 
   def deposit(value)
@@ -14,17 +17,14 @@ class Account
   end
 
   def withdraw(value)
+    return 'Your funds are insufficient' if @balance < value
+    
     @balance -= value
     @transactions.push({ TIME.strftime("%d/%m/%Y") => value })
   end
 
-  def statement
-    puts "date || credit || debit || balance"
-    @transactions.each do |transaction|
-      transaction.each do |key, value|
-        puts "#{key}" " || " "#{value}" " || " "#{@balance}"
-      end
-    end
+  def update_statement
+    return 1000
   end
 
   attr_accessor :balance

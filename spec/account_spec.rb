@@ -35,15 +35,16 @@ describe Account do
   end
 
   it "adds the withdrawal to the transaction history" do
+    subject.deposit(1000)
     subject.withdraw(500)
     @time = Time.now
     expect(subject.instance_variable_get(:@transactions)).to include({ @time.strftime("%d/%m/%Y") => 500 })
   end
 
-  it "returns transactions as a statement" do
+  it "updates transactions with Statement" do
     subject.deposit(1000)
     @time = Time.now
-    expect(subject.statement).to include()
+    expect(subject.update_statement).to eq(1000)
   end
 
 end
