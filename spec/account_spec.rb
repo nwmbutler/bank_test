@@ -28,10 +28,9 @@ describe Account do
     expect(subject.instance_variable_get(:@balance)).to eql(500)
   end
 
-  # it "displays the time that the deposit was made" do
-  #   subject.deposit(1000)
-  #   expect(subject)
-  # end
-
+  it "adds the deposit to the transaction history" do
+    subject.deposit(1000)
+    expect(subject.instance_variable_get(:@transactions)).to include(1000)
+  end
 
 end

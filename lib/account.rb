@@ -9,6 +9,7 @@ BASE_BALANCE = 0
 
   def deposit(int)
     @balance += int
+    @transactions.push(int)
   end
 
   def withdraw(int)
