@@ -6,7 +6,7 @@ describe Account do
   end
 
   it "has an initial balance of 0 pounds" do
-    expect(subject.instance_variable_get(:@balance)).to include(0)
+    expect(subject.instance_variable_get(:@balance)).to eq(0)
   end
 
   it "allows a deposit to be made" do
@@ -15,7 +15,7 @@ describe Account do
 
   it "adds deposit to balance" do
     subject.deposit(1000)
-    expect(subject.instance_variable_get(:@balance)).to include(1000)
+    expect(subject.instance_variable_get(:@balance)).to eq(1000)
   end
 
   it "allows a withdrawal" do

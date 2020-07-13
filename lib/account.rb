@@ -8,13 +8,11 @@ BASE_BALANCE = 0
   end
 
   def deposit(int)
-    @balance.push(int)
+    @balance += int
   end
 
   def withdraw(int)
-    @temp = @balance.sum
-    @temp -= int
-    @balance = @temp
+    @balance -= int
   end
 
 end
