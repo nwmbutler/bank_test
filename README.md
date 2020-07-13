@@ -31,3 +31,30 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
+# Domain Modelling
+
+<br>
+<p align="center">
+<img src="images/domain_model.png" width="75%">
+<br><br>
+  Top Page.
+</p>
+
+## User stories
+
+```
+As a customer
+So that I can protect my money
+I want to be able to deposit funds in an account
+```
+```
+As a customer
+So that I can spend my money
+I want to be able to withdraw funds in an account
+```
+```
+As a customer
+So that I can manage my money
+I would like to be able to print a nicely formatted statement
+```
