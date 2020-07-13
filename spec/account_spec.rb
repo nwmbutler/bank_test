@@ -43,7 +43,7 @@ describe Account do
   it "returns transactions as a statement" do
     subject.deposit(1000)
     @time = Time.now
-    expect(subject.statement).to include({ @time.strftime("%d/%m/%Y") => 1000 })
+    expect(subject.statement).to include()
   end
 
 end
