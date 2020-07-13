@@ -5,16 +5,17 @@ BASE_BALANCE = 0
   def initialize
     @balance = BASE_BALANCE
     @transactions = []
+    @time = Time.now
   end
 
-  def deposit(int)
-    @balance += int
-    @transactions.push(int)
+  def deposit(value)
+    @balance += value
+    @transactions.push({@time.strftime("%d/%m/%Y") => value})
   end
 
-  def withdraw(int)
-    @balance -= int
-    @transactions.push(int)
+  def withdraw(value)
+    @balance -= value
+    @transactions.push({@time.strftime("%d/%m/%Y") => value})
   end
 
 end
