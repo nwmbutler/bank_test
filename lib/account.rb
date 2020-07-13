@@ -1,14 +1,16 @@
 class Account
   def initialize
-    @balance = 0
+    @balance = [0]
   end
 
   def deposit(int)
-    @balance += int
+    @balance.push(int)
   end
 
   def withdraw(int)
-    @balance -= int
+    @temp = @balance.sum
+    @temp -= int
+    @balance = @temp
   end
 
 end
