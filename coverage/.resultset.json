@@ -85,10 +85,33 @@
       },
       "/Users/nickbutler/Projects/wk10/bank_test/spec/statement_spec.rb": {
         "lines": [
-
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nickbutler/Projects/wk10/bank_test/lib/statement.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
         ]
       }
     },
-    "timestamp": 1594645922
+    "timestamp": 1594646376
   }
 }
