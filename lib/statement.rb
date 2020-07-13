@@ -8,4 +8,9 @@ class Statement
     @balance = balance
     @date = DATE
   end
+
+  def format
+    "#{@date} || #{@credit} || #{@debit} || #{@balance}"
+  end
+
 end

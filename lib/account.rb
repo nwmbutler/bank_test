@@ -25,7 +25,9 @@ class Account
   end
 
   def statement
-
+    puts "date || credit || debit || balance"
+    @transactions.reverse
+    puts @transactions.map(&:format)
   end
 
   private

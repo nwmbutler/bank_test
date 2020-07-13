@@ -11,4 +11,9 @@ describe Statement do
     expect(subject.instance_variable_get(:@debit)).to eq nil
   end
 
+  it "formats for IRB, with date, credit, debit, balance" do
+    statement = Statement.new(credit: 1000, debit: 0, balance: 1000, date: 13/07/2020)
+    expect(statement.format).to eq("13/07/2020 || 1000 || 0 || 1000")
+  end
+
 end
