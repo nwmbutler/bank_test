@@ -33,4 +33,9 @@ describe Account do
     expect(subject.instance_variable_get(:@transactions)).to include(1000)
   end
 
+  it "adds the withdrawal to the transaction history" do
+    subject.withdraw(500)
+    expect(subject.instance_variable_get(:@transactions)).to include(500)
+  end
+
 end

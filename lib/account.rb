@@ -14,6 +14,7 @@ BASE_BALANCE = 0
 
   def withdraw(int)
     @balance -= int
+    @transactions.push(int)
   end
 
 end
