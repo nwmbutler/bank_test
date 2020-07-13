@@ -18,4 +18,8 @@ describe Account do
     expect(subject.instance_variable_get(:@balance)).to eql(1000)
   end
 
+  it "allows a withdrawal" do
+    expect(subject).to respond_to(:withdraw).with(1).arguments
+  end
+
 end
