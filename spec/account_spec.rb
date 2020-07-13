@@ -27,5 +27,4 @@ describe Account do
     subject.withdraw(500)
     expect(subject.instance_variable_get(:@balance)).to eql(500)
   end
-
 end
