@@ -9,8 +9,13 @@ describe Account do
     expect(subject.instance_variable_get(:@balance)).to eql(0)
   end
 
-  it "adds allows a deposit to be made" do
+  it "allows a deposit to be made" do
     expect(subject).to respond_to(:deposit).with(1).arguments
+  end
+
+  it "adds deposit to balance" do
+    subject.deposit(1000)
+    expect(subject.instance_variable_get(:@balance)).to eql(1000)
   end
 
 end

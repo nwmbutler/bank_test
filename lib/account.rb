@@ -4,7 +4,7 @@ class Account
   end
 
   def deposit(int)
-    return int
+    @balance += int
   end
 
 end
