@@ -12,7 +12,7 @@ describe Statement do
   end
 
   it "formats for IRB, with date, credit, debit, balance" do
-    statement = Statement.new(credit: 1000, debit: 0, balance: 1000, date: 13/07/2020)
+    statement = Statement.new(credit: 1000, debit: 0, balance: 1000)
     expect(statement.format).to eq("13/07/2020 || 1000 || 0 || 1000")
   end
 

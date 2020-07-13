@@ -75,7 +75,7 @@ Layout/SpaceAroundEqualsInParameterDefault:
 Layout/SpaceAroundKeyword:
   Enabled: true
 Layout/SpaceAroundOperators:
-  Enabled: true
+  Enabled: false
 Layout/SpaceBeforeBlockBraces:
   Enabled: false
 Layout/SpaceBeforeComma:

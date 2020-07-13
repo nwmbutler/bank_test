@@ -14,7 +14,6 @@ class Account
   def deposit(value)
     @balance += value
     deposit_update(credit: value, balance: @balance)
-
   end
 
   def withdraw(value)
