@@ -50,3 +50,12 @@ As a customer
 So that I can manage my money
 I would like to be able to print a nicely formatted statement
 ```
+
+## IRB Spark
+```
+require './lib/account.rb'
+acc = Account.new
+acc.deposit(1000)
+acc.deposit(2000)
+acc.withdraw(500)
+```
