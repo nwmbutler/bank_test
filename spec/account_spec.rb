@@ -1,4 +1,5 @@
 require 'account'
+require 'transaction_helper'
 
 describe Account do
   it "is an instance of Account" do
@@ -14,7 +15,7 @@ describe Account do
   end
 
   it "adds deposit to balance" do
-    subject.deposit(1000)
+    deposit
     expect(subject.instance_variable_get(:@balance)).to eq(1000)
   end
 
@@ -23,20 +24,18 @@ describe Account do
   end
 
   it "deducts withdrawal from balance" do
-    subject.deposit(1000)
-    subject.withdraw(500)
+    deposit_and_withdraw
     expect(subject.instance_variable_get(:@balance)).to eql(500)
   end
 
-  it "adds the deposit to the transaction history" do
-    subject.deposit(1000)
+  it "adds the deposit to the transactions" do
+    deposit
     expect(subject.instance_variable_get(:@balance)).to eq(1000)
   end
 
-  it "adds the withdrawal to the transaction history" do
-    subject.deposit(1000)
-    subject.withdraw(500)
+  it "adds the withdrawal to the transactions" do
+    deposit_and_withdraw
     expect(subject.instance_variable_get(:@balance)).to eq(500)
   end
-  
+
 end

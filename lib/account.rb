@@ -4,6 +4,7 @@ class Account
 
   BASE_BALANCE = 0
   TIME = Time.now
+  IRB_TOPPER = "date || credit || debit || balance"
 
   def initialize(balance: BASE_BALANCE, statement: Statement)
     @balance = balance
@@ -17,16 +18,15 @@ class Account
   end
 
   def withdraw(value)
-    return 'Your funds are insufficient' if @balance < value
+    return 'insufficient funds' if @balance < value
 
     @balance -= value
     withdrawal_update(debit: value, balance: balance)
   end
 
   def statement
-    puts "date || credit || debit || balance"
-    @transactions.reverse
-    puts @transactions.map(&:format)
+    ascending = @transactions.reverse
+    puts IRB_TOPPER, ascending.map(&:format)
   end
 
   private
