@@ -56,12 +56,28 @@ As a customer
 So that I can manage my money
 I would like to be able to print a nicely formatted statement
 ```
+### Testing
+* Testing was done with RSPEC - all tests are passing
+* Coverage is with SimpleCov - coverage is at 98.78%
+* Linting performed with Rubocop - 6 files inspected, no offenses detected
+
+### Installation
+* Clone the repo https://github.com/nwmbutler/bank_test.git
+* $ bundle install
+* $ irb -r './lib/account.rb'
 
 ## IRB Spark
 ```
-require './lib/account.rb'
 acc = Account.new
 acc.deposit(1000)
 acc.deposit(2000)
 acc.withdraw(500)
+acc.statement
 ```
+* from this input the output will be:
+<br>
+<p align="center">
+<img src="images/irb_output.png" width="30%">
+<br><br>
+  CRC cards.
+</p>
