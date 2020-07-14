@@ -13,15 +13,17 @@ class Account
   end
 
   def deposit(value)
-    @balance += value
-    deposit_update(credit: value, balance: @balance)
+    rounded = value.round(2)
+    @balance += rounded
+    deposit_update(credit: rounded, balance: @balance)
   end
 
   def withdraw(value)
     return 'insufficient funds' if @balance < value
 
-    @balance -= value
-    withdrawal_update(debit: value, balance: balance)
+    rounded = value.round(2)
+    @balance -= rounded
+    withdrawal_update(debit: rounded, balance: balance)
   end
 
   def statement
