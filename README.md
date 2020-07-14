@@ -92,3 +92,7 @@ acc.statement
 <br><br>
   IRB output.
 </p>
+
+### Changes from feedback
+* Instructions to run rspec and rubocop added to README
+* Statement class renamed to Transaction class for clarity
