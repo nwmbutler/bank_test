@@ -28,7 +28,7 @@ date || credit || debit || balance
 
 <br>
 <p align="center">
-<img src="images/domain_model.png" width="30%">
+<img src="images/domain_model.png" width="75%">
 <br><br>
   Domain model.
 </p>
