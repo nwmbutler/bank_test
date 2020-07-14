@@ -28,13 +28,13 @@ date || credit || debit || balance
 
 <br>
 <p align="center">
-<img src="images/domain_model.png" width="75%">
+<img src="images/domain_model.png" width="30%">
 <br><br>
   Domain model.
 </p>
 <br>
 <p align="center">
-<img src="images/crc.png" width="75%">
+<img src="images/crc.png" width="30%">
 <br><br>
   CRC cards.
 </p>
