@@ -72,8 +72,10 @@ I would like to be able to print a nicely formatted statement
 
 ### Installation
 * Clone the repo https://github.com/nwmbutler/bank_test.git
-* $ bundle install
-* $ irb -r './lib/account.rb'
+* ```$ bundle install``` to install dependencies
+* ```$ rspec``` to run tests and see coverage
+* ```$ rubocop``` to run linter
+* ```$ irb -r './lib/account.rb'``` - launches IRB ready of input of below
 
 ## IRB Spark
 ```
