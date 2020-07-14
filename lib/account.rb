@@ -25,20 +25,19 @@ class Account
   end
 
   def statement
-    ascending = @transactions.reverse
-    puts IRB_TOPPER, ascending.map(&:format)
+    puts IRB_TOPPER, @transactions.map(&:format)
   end
 
   private
 
   def deposit_update(credit: nil, balance: nil)
     update = @statement.new(credit: credit, balance: balance)
-    @transactions.push(update)
+    @transactions.unshift(update)
   end
 
   def withdrawal_update(debit: nil, balance: nil)
     update = @statement.new(debit: debit, balance: balance)
-    @transactions.push(update)
+    @transactions.unshift(update)
   end
 
   attr_accessor :balance
