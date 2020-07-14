@@ -32,6 +32,12 @@ date || credit || debit || balance
 <br><br>
   Domain model.
 </p>
+<br>
+<p align="center">
+<img src="images/crc.png" width="75%">
+<br><br>
+  CRC cards.
+</p>
 
 ## User stories
 
