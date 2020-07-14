@@ -79,5 +79,5 @@ acc.statement
 <p align="center">
 <img src="images/irb_output.png" width="30%">
 <br><br>
-  CRC cards.
+  IRB output.
 </p>
