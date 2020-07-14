@@ -1,8 +1,8 @@
-require 'statement'
+require 'transaction'
 
-describe Statement do
-  it "is an instance of Statement" do
-    expect(subject).to be_a_kind_of Statement
+describe Transaction do
+  it "is an instance of Transaction" do
+    expect(subject).to be_a_kind_of Transaction
   end
 
   it "initializes with credit, debit & balance = nil" do
@@ -13,7 +13,7 @@ describe Statement do
 
   it "formats for IRB, with date, credit, debit, balance" do
     date = Time.now.strftime("%d/%m/%Y")
-    statement = Statement.new(credit: 1000, debit: 0, balance: 1000)
+    statement = Transaction.new(credit: 1000, debit: 0, balance: 1000)
     expect(statement.format).to eq("#{date} || 1000 || 0 || 1000")
   end
 

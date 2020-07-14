@@ -1,13 +1,13 @@
-require_relative './statement.rb'
+require_relative './transaction.rb'
 
 class Account
 
   TIME = Time.now
 
-  def initialize(balance: 0, statement: Statement)
+  def initialize(balance: 0, transaction: Transaction)
     @balance = balance
-    @transactions = []
-    @statement = statement
+    @transaction_record = []
+    @transaction = transaction
     @irb_topper = "date || credit || debit || balance"
   end
 
@@ -23,20 +23,20 @@ class Account
     withdrawal_update(debit: value.round(2), balance: balance)
   end
 
-  def statement
-    puts @irb_topper, @transactions.map(&:format)
+  def transaction
+    puts @irb_topper, @transaction_record.map(&:format)
   end
 
   private
 
   def deposit_update(credit: nil, balance: nil)
-    update = @statement.new(credit: credit, balance: balance)
-    @transactions.unshift(update)
+    update = @transaction.new(credit: credit, balance: balance)
+    @transaction_record.unshift(update)
   end
 
   def withdrawal_update(debit: nil, balance: nil)
-    update = @statement.new(debit: debit, balance: balance)
-    @transactions.unshift(update)
+    update = @transaction.new(debit: debit, balance: balance)
+    @transaction_record.unshift(update)
   end
 
   attr_accessor :balance

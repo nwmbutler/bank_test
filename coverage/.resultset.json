@@ -105,7 +105,7 @@
           null
         ]
       },
-      "/Users/nickbutler/Projects/wk10/bank_test 2/lib/statement.rb": {
+      "/Users/nickbutler/Projects/wk10/bank_test 2/lib/transaction.rb": {
         "lines": [
           1,
           null,
@@ -137,7 +137,7 @@
           null
         ]
       },
-      "/Users/nickbutler/Projects/wk10/bank_test 2/spec/statement_spec.rb": {
+      "/Users/nickbutler/Projects/wk10/bank_test 2/spec/transaction_spec.rb": {
         "lines": [
           1,
           null,
@@ -162,6 +162,6 @@
         ]
       }
     },
-    "timestamp": 1594741188
+    "timestamp": 1594746548
   }
 }

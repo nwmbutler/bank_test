@@ -1,4 +1,4 @@
-class Statement
+class Transaction
 
   DATE = Time.now.strftime("%d/%m/%Y")
 
