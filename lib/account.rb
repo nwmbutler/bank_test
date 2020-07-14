@@ -2,14 +2,13 @@ require_relative './statement.rb'
 
 class Account
 
-  BASE_BALANCE = 0
   TIME = Time.now
-  IRB_TOPPER = "date || credit || debit || balance"
 
-  def initialize(balance: BASE_BALANCE, statement: Statement)
+  def initialize(balance: 0, statement: Statement)
     @balance = balance
     @transactions = []
     @statement = statement
+    @irb_topper = "date || credit || debit || balance"
   end
 
   def deposit(value)
@@ -25,7 +24,7 @@ class Account
   end
 
   def statement
-    puts IRB_TOPPER, @transactions.map(&:format)
+    puts @irb_topper, @transactions.map(&:format)
   end
 
   private

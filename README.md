@@ -24,6 +24,15 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
+# Approach
+
+I see three main things the program needs to be able to do to satisfy the Acceptance criteria.
+Deposit - call deposit on the account with an amount as argument.
+Withdraw - call withdraw on the account with an amount as argument.
+Statement - call statement on the account, no argument, to print the output.
+
+* See the Domain model and CRC cards below for how I think this will work.
+
 # Domain Modelling
 
 <br>
