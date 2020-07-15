@@ -23,7 +23,7 @@ class Account
     withdrawal_update(debit: value.round(2), balance: balance)
   end
 
-  def transaction
+  def statement
     puts @irb_topper, @transaction_record.map(&:format)
   end
 

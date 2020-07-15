@@ -1,7 +1,12 @@
 require 'account'
-require 'transaction_helper'
+
 
 describe Account do
+
+let(:account) { Account.new }
+let(:transaction) { Transaction }
+let(:deposit) { account.deposit(1000) }
+let(:withdraw) { account.withdraw(500) }
 
   it "is an instance of Account" do
     expect(subject).to be_a_kind_of Account
@@ -17,7 +22,7 @@ describe Account do
 
   it "adds deposit to balance" do
     deposit
-    expect(subject.instance_variable_get(:@balance)).to eq(1000)
+    expect(account.instance_variable_get(:@balance)).to eq(1000)
   end
 
   it "rounds a deposit with more than 2 numbers after the decimal" do
@@ -30,24 +35,26 @@ describe Account do
   end
 
   it "deducts withdrawal from balance" do
-    deposit_and_withdraw
-    expect(subject.instance_variable_get(:@balance)).to eql(500)
+    deposit
+    withdraw
+    expect(account.instance_variable_get(:@balance)).to eql(500)
   end
 
   it "rounds a withdrawal with more than 2 numbers after the decimal" do
     deposit
-    subject.withdraw(45.993)
-    expect(subject.instance_variable_get(:@balance)).to eq(954.01)
-  end
-
-  it "adds the deposit to the transactions" do
-    deposit
-    expect(subject.instance_variable_get(:@balance)).to eq(1000)
+    account.withdraw(45.993)
+    expect(account.instance_variable_get(:@balance)).to eq(954.01)
   end
 
   it "adds the withdrawal to the transactions" do
-    deposit_and_withdraw
-    expect(subject.instance_variable_get(:@balance)).to eq(500)
+    deposit
+    withdraw
+    expect(account.instance_variable_get(:@balance)).to eq(500)
+  end
+
+  it "displays a nicely formatted statement" do
+    allow(transaction).to receive(:new).with(credit: 1000, debit: nil, balance: 1000)
+    expect { account.statement }.to output(/"date || credit || debit || balance"/).to_stdout
   end
 
 end
