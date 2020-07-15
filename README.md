@@ -67,7 +67,7 @@ I would like to be able to print a nicely formatted statement
 ```
 ### Testing
 * Testing was done with RSPEC - all tests are passing
-* Coverage is with SimpleCov - coverage is at 98.78%
+* Coverage is with SimpleCov - coverage is at 100%
 * Linting performed with Rubocop - 6 files inspected, no offenses detected
 
 ### Installation

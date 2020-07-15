@@ -1,12 +1,11 @@
 require 'account'
 
-
 describe Account do
 
-let(:account) { Account.new }
-let(:transaction) { Transaction }
-let(:deposit) { account.deposit(1000) }
-let(:withdraw) { account.withdraw(500) }
+  let(:account) { Account.new }
+  let(:transaction) { Transaction }
+  let(:deposit) { account.deposit(1000) }
+  let(:withdraw) { account.withdraw(500) }
 
   it "is an instance of Account" do
     expect(subject).to be_a_kind_of Account
