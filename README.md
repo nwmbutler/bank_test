@@ -98,3 +98,4 @@ acc.statement
 * Statement class renamed to Transaction class for clarity (14/7/2020)
 * Unit test for statement method added (15/7/2020)
 * Feature test for user interaction added (15/7/2020)
+* Unshift removed and push used instead, reverse added to make output ascending (15/7/2020)
