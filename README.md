@@ -75,7 +75,7 @@ I would like to be able to print a nicely formatted statement
 * ```$ bundle install``` to install dependencies
 * ```$ rspec``` to run tests and see coverage
 * ```$ rubocop``` to run linter
-* ```$ irb -r './lib/account.rb'``` - launches IRB ready of input of below
+* ```$ irb -r './lib/account.rb'``` - launches IRB ready for input of below
 
 ## IRB Spark
 ```
