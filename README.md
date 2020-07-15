@@ -94,5 +94,7 @@ acc.statement
 </p>
 
 ### Changes from feedback
-* Instructions to run rspec and rubocop added to README
-* Statement class renamed to Transaction class for clarity
+* Instructions to run rspec and rubocop added to README (14/7/2020)
+* Statement class renamed to Transaction class for clarity (14/7/2020)
+* Unit test for statement method added (15/7/2020)
+* Feature test for user interaction added (15/7/2020)
