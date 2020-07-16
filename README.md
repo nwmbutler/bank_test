@@ -103,3 +103,4 @@ acc.statement
 ### Changes from second feedback
 * Feature test updated, no let lines, no subject (16/7/2020)
 * Superseded and redundant tests removed (- 3 tests) (16/7/2020)
+* Statement output now has 2 decimal place (16/7/2020)
