@@ -2,7 +2,7 @@ require_relative './transaction.rb'
 
 class Account
 
-  TIME = Time.now
+  DATE = Time.now.strftime("%d/%m/%Y")
 
   def initialize(balance: 0, transaction: Transaction)
     @balance = balance
@@ -31,13 +31,13 @@ class Account
   private
 
   def deposit_update(credit: nil, balance: nil)
-    update = @transaction.new(credit: credit, balance: balance)
+    update = @transaction.new(date: DATE, credit: credit, balance: balance)
     p update
     @transaction_record.push(update)
   end
 
   def withdrawal_update(debit: nil, balance: nil)
-    update = @transaction.new(debit: debit, balance: balance)
+    update = @transaction.new(date: DATE, debit: debit, balance: balance)
     @transaction_record.push(update)
   end
 

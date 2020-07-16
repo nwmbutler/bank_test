@@ -1,4 +1,5 @@
 require 'account'
+require 'timecop'
 
 describe Account do
 
@@ -43,5 +44,4 @@ describe Account do
     allow(transaction).to receive(:new).with(credit: 1000, debit: nil, balance: 1000)
     expect { account.statement }.to output(/"date || credit || debit || balance"/).to_stdout
   end
-
 end

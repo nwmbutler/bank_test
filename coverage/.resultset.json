@@ -25,10 +25,10 @@
           1,
           null,
           1,
-          8,
-          8,
-          8,
-          8,
+          9,
+          9,
+          9,
+          9,
           null,
           null,
           1,
@@ -70,8 +70,6 @@
           1,
           null,
           1,
-          null,
-          1,
           11,
           11,
           11,
@@ -91,6 +89,7 @@
       },
       "/Users/nickbutler/Projects/wk10/bank_test/spec/unit/account_spec.rb": {
         "lines": [
+          1,
           1,
           null,
           1,
@@ -136,26 +135,33 @@
           1,
           2,
           null,
-          null,
           null
         ]
       },
       "/Users/nickbutler/Projects/wk10/bank_test/spec/unit/transaction_spec.rb": {
         "lines": [
           1,
-          null,
           1,
           null,
           1,
           1,
           1,
+          null,
+          null,
+          1,
           1,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1594897337
+    "timestamp": 1594898975
   }
 }
