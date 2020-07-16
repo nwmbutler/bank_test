@@ -88,6 +88,14 @@ acc.statement
 * from this input the output will be:
 <br>
 <p align="center">
+<img src="images/irb2.png" width="30%">
+<br><br>
+  IRB output.
+</p>
+
+* previously the output did not have decimals as per the Acceptance criteria:
+<br>
+<p align="center">
 <img src="images/irb_output.png" width="30%">
 <br><br>
   IRB output.
@@ -103,3 +111,4 @@ acc.statement
 ### Changes from second feedback
 * Feature test updated, no let lines, no subject (16/7/2020)
 * Superseded and redundant tests removed (- 3 tests) (16/7/2020)
+* Statement output now has 2 decimal place (16/7/2020)
