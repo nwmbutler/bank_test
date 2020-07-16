@@ -12,26 +12,27 @@ class Account
   end
 
   def deposit(value)
-    @balance += value.round(2)
-    deposit_update(credit: value.round(2), balance: @balance)
+    @balance += value
+    deposit_update(credit: value, balance: @balance)
   end
 
   def withdraw(value)
     return 'insufficient funds' if @balance < value
 
-    @balance -= value.round(2)
-    withdrawal_update(debit: value.round(2), balance: balance)
+    @balance -= value
+    withdrawal_update(debit: value, balance: balance)
   end
 
   def statement
     ascending = @transaction_record.reverse
-    puts @irb_topper, ascending.map(&:format)
+    puts @irb_topper, ascending.map(&:display)
   end
 
   private
 
   def deposit_update(credit: nil, balance: nil)
     update = @transaction.new(credit: credit, balance: balance)
+    p update
     @transaction_record.push(update)
   end
 
