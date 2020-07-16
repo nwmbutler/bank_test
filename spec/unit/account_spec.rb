@@ -7,18 +7,6 @@ describe Account do
   let(:deposit) { account.deposit(1000) }
   let(:withdraw) { account.withdraw(500) }
 
-  it "is an instance of Account" do
-    expect(subject).to be_a_kind_of Account
-  end
-
-  it "has an initial balance of 0 pounds" do
-    expect(subject.instance_variable_get(:@balance)).to eq(0)
-  end
-
-  it "allows a deposit to be made" do
-    expect(subject).to respond_to(:deposit).with(1).arguments
-  end
-
   it "adds deposit to balance" do
     deposit
     expect(account.instance_variable_get(:@balance)).to eq(1000)

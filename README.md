@@ -99,3 +99,7 @@ acc.statement
 * Unit test for statement method added (15/7/2020)
 * Feature test for user interaction added (15/7/2020)
 * Unshift removed and push used instead, reverse added to make output ascending (15/7/2020)
+
+### Changes from second feedback
+* Feature test updated, no let lines, no subject (16/7/2020)
+* Superseded and redundant tests removed (- 3 tests) (16/7/2020)
