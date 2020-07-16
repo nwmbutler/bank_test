@@ -13,25 +13,10 @@ describe Account do
     expect(account.instance_variable_get(:@balance)).to eq(1000)
   end
 
-  it "rounds a deposit with more than 2 numbers after the decimal" do
-    subject.deposit(45.993)
-    expect(subject.instance_variable_get(:@balance)).to eq(45.99)
-  end
-
-  it "allows a withdrawal" do
-    expect(subject).to respond_to(:withdraw).with(1).arguments
-  end
-
   it "deducts withdrawal from balance" do
     deposit
     withdraw
     expect(account.instance_variable_get(:@balance)).to eql(500)
-  end
-
-  it "rounds a withdrawal with more than 2 numbers after the decimal" do
-    deposit
-    account.withdraw(45.993)
-    expect(account.instance_variable_get(:@balance)).to eq(954.01)
   end
 
   it "adds the withdrawal to the transactions" do

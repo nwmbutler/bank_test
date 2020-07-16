@@ -12,7 +12,7 @@ class Transaction
   end
 
   def format(input)
-    '%.2f' % (input.to_f) unless input.nil?
+    '%.2f' % input.to_f unless input.nil?
   end
 
 end

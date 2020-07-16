@@ -28,6 +28,8 @@ Layout/EmptyLines:
   Enabled: true
 Layout/ExtraSpacing:
   Enabled: true
+Style/FormatStringToken:
+  Enabled: false
 Style/GuardClause:
   Enabled: true
 Style/IdenticalConditionalBranches:
