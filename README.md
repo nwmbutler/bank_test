@@ -88,6 +88,14 @@ acc.statement
 * from this input the output will be:
 <br>
 <p align="center">
+<img src="images/irb2.png" width="30%">
+<br><br>
+  IRB output.
+</p>
+
+* previously the output did not have decimals as per the Acceptance criteria:
+<br>
+<p align="center">
 <img src="images/irb_output.png" width="30%">
 <br><br>
   IRB output.
