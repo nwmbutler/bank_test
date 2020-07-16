@@ -112,3 +112,5 @@ acc.statement
 * Feature test updated, no let lines, no subject (16/7/2020)
 * Superseded and redundant tests removed (- 3 tests) (16/7/2020)
 * Statement output now has 2 decimal place (16/7/2020)
+* Timecop test added to check date of transaction is relevant to transaction itself (16/7/2020)
+* Date now pushed with transaction data rather than on class instantiation (16/7/2020)
