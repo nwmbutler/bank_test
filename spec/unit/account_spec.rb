@@ -4,7 +4,6 @@ require 'timecop'
 describe Account do
 
   let(:account) { Account.new }
-  let(:transaction) { Transaction }
   let(:deposit) { account.deposit(1000) }
   let(:withdraw) { account.withdraw(500) }
 
@@ -26,7 +25,6 @@ describe Account do
   end
 
   it "displays a nicely formatted statement" do
-    allow(transaction).to receive(:new).with(credit: 1000, debit: nil, balance: 1000)
     expect { account.statement }.to output(/"date || credit || debit || balance"/).to_stdout
   end
 end

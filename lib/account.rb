@@ -32,7 +32,6 @@ class Account
 
   def deposit_update(credit: nil, balance: nil)
     update = @transaction.new(date: DATE, credit: credit, balance: balance)
-    p update
     @transaction_record.push(update)
   end
 
